@@ -41,7 +41,6 @@ const createBook = async (req, res) => {
 // Update a Book
 const updateBook = async (req, res) => {
   const { id } = req.params;
-  console.log(req.body)
   try {
     const book = await BookModel.findByIdAndUpdate(id, req.body, {
       new: true,
